@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "OswaldRegular";
+  src:
+  url("../fonts/oswaldregular.woff") format("woff"),
+  url("../fonts/oswaldregular.woff2") format("woff2");
+};
+
+$font-family: "OswaldRegular", Arial, sans-serif;
+
+$mobile-widths-only: "(max-width: 1199px)";
+$tablet-widths: "(min-width: 660px)";
+$desktop-widths: "(min-width: 920px)";
+
+$green: #68b738;
+$grey: #818181;
+$lightgrey: #f2f2f2;
+$greyish: #d9d9d9;

@@ -1,0 +1,26 @@
+.social-link {
+  text-indent: -5000px;
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--vk {
+    background: url(../img/icon-vk-mobile.svg);
+    width: 22px;
+    height: 12px;
+  }
+
+  &--inst {
+    background: url(../img/icon-insta-mobile.svg);
+    width: 16px;
+    height: 16px;
+  }
+
+  &--fb {
+    background: url(../img/icon-fb-mobile.svg);
+    width: 10px;
+    height: 19px;
+  }
+}

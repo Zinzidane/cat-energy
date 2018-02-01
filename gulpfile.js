@@ -93,7 +93,7 @@ gulp.task("serve", function () {
     ui: false
   });
 
-  gulp.watch("less/**/*.less", ["style"]);
+  gulp.watch("sass/**/*.scss", ["style"]);
   gulp.watch("*.html", ["html:update"]);
 });
 

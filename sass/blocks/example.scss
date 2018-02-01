@@ -1,0 +1,63 @@
+.example {
+  margin: 0;
+  padding: 0; 
+  background-color: $lightgrey;
+}
+
+.example__wrapper {
+  @include container;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.example__about {
+  font-family: "Arial";
+  display: block;
+}
+
+.example__overview {
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__overview-item {
+  font-family: "OswaldRegular";
+  padding: 10px 0;
+  margin-bottom: 20px;
+  width: 125px;
+  height: 57px;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  border: 1px solid $greyish;
+
+  span {
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    background-color: $lightgrey;
+    padding: 0 10px;
+    font-family: "Arial";
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: lowercase;
+    z-index: 10;
+  }
+}
+
+.example__cost {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
