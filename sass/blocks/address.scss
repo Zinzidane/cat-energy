@@ -6,6 +6,11 @@
 .address__wrapper {
   padding-top: 35px;
   background-color: #fff;
+
+  &--grey {
+    padding-top: 0;
+    background: $lightgrey;
+  }
 }
 
 .address__title {
@@ -19,11 +24,13 @@
 }
 
 .address__invitation {
+  width: 50%;
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .address__info {
+  width: 50%;
   font-family: "Arial";
   font-size: 14px;
 }
