@@ -22,8 +22,8 @@
 }
 
 .about__item {
-  position: relative;
   font-family: Arial;
+  position: relative;
   padding: 5px 0 5px 80px;
   margin-bottom: 20px;
   line-height: 18px;
@@ -38,28 +38,99 @@
     background-color: $green;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 60px;
-    height: 60px;
-  }
-
-  &--leaf::after {
+  &--leaf::before {
     background-image: url(../img/advantage-leaf@1x.png);
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
-  &--powder::after {
+  &--powder::before {
     background-image: url(../img/advantage-powder@1x.png);
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
-  &--dining::after {
+  &--dining::before {
     background-image: url(../img/advantage-dining@1x.png);
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
-  &--clock::after {
+  &--clock::before {
     background-image: url(../img/advantage-clock@1x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media #{$tablet-widths} {
+  .about {
+    border-bottom: 1px solid $lightgrey;
+  }
+
+  .about__wrapper {
+    padding-top: 5px;
+  }
+
+  .about__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 60px;
+  }
+
+  .about__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about__item {
+    width: 40%;
+    padding: 0;
+    padding-top: 115px;
+    padding-bottom: 60px;
+    padding-right: 45px;
+    margin-bottom: 80px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-bottom: 50px;
+    }
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &--leaf::after {
+      content: "1";
+    }
+
+    &--powder::after {
+      content: "2";
+    }
+
+    &--dining::after {
+      content: "3";
+    }
+
+    &--clock::after {
+      content: "4";
+    }
+
+    &::after {
+      position: absolute;
+      font-family: "OswaldRegular", "Arial", sans-serif;
+      font-size: 280px;
+      left: auto;
+      right: 55px;
+      top: 95px;
+      color: $lightgrey;
+      z-index: -5;
+    }
+
   }
 }

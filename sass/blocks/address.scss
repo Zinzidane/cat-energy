@@ -39,3 +39,32 @@
   background-image: url("../img/map-mobile.png");
   height: 364px;
 }
+
+@media #{$tablet-widths} {
+  .address__wrapper {
+    padding-top: 40px;
+  }
+
+  .address__about {
+    padding-bottom: 40px;
+  }
+
+  .address__invitation {
+    width: 20%;
+    font-size: 20px;
+  }
+
+  .address__info {
+    width: 23%;
+    font-size: 16px;
+    text-align: right;
+
+    span {
+      display: block;
+
+      &:first-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

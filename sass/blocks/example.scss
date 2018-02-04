@@ -7,7 +7,6 @@
 .example__wrapper {
   @include container;
   padding-top: 30px;
-  padding-bottom: 40px;
 }
 
 .example__title {
@@ -60,4 +59,67 @@
   text-align: center;
   margin: 0 auto;
   text-transform: uppercase;
+}
+
+@media #{$tablet-widths} {
+  .example {
+    background-color: #fff;
+  }
+
+  .example__wrapper {
+    padding-top: 50px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    margin-bottom: 65px;  
+  }
+
+  .example__desc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 250px;
+  }
+
+  .example__about {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 55px;
+    letter-spacing: 0.3px;
+  }
+
+  .example__overview {
+    width: 50%;
+  }
+
+  .example__overview-item {
+    width: 162px;
+    height: 72px;
+    font-size: 30px;
+    line-height: 30px;
+
+    span {
+      width: 124px;
+      font-size: 14px;
+      line-height: 18px;
+      background-color: #fff;
+    }
+
+    &:last-child span {
+      width: 147px;
+    }
+  }
+
+  .example__cost {
+    width: 40%;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+    text-align: right;
+    span {
+      display: block;
+    }
+  }
 }
