@@ -168,5 +168,8 @@
     line-height: 28px;
     border-bottom: 1px dashed $greyish;
   }
+}
 
+@media #{$desktop-widths} {
+  
 }

@@ -159,3 +159,53 @@
     font-weight: bold;
   }
 }
+
+@media #{$desktop-widths} {
+  .programms__wrapper {
+    margin-bottom: 75px;
+  }
+
+  .programms__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programms__item {
+    padding: 0;
+    padding: 80px 50px 60px 50px;
+    margin-bottom: 0;
+    width: 47%;
+
+    &::before {
+      top: 48px;
+      left: 50px;
+      right: auto;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::after {
+      top: 42px;
+      left: 65px;
+      right: auto;
+      width: 70px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: 70px;
+      left: 31px;
+      right: auto;
+      width: 134px;
+      height: 56px;
+    }
+
+  }
+
+  .programms__item-title {
+    padding: 0;
+    padding-left: 160px;
+    margin-bottom: 70px;
+    line-height: 36px;
+  }
+}

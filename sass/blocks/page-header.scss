@@ -2,4 +2,44 @@
   margin: 0;
   padding: 0;
   background-color: #fff;
+  position: relative;
+}
+
+.page-header__title {
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 14px;
+  padding: 0;
+  text-align: left;
+  font-size: 36px;
+  color: #000;
+  line-height: 42px;
+
+
+  &--form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &--catalog {
+    @include container;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media #{$tablet-widths} {
+  .page-header__title {
+    margin-left: 5%;
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000;
+    font-weight: normal;
+    text-align: left;
+
+    &--catalog {
+      margin-bottom: 130px;
+    }
+  }
 }

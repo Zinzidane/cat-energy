@@ -123,3 +123,50 @@
     }
   }
 }
+
+@media #{$desktop-widths} {
+  .example {
+    display: flex;
+    background-color: $lightgrey;
+  }
+
+  .example__wrapper {
+    padding-top: 0;
+    padding-left: 7.5%;
+  }
+
+  .example__title {
+    padding-top: 40px;
+    margin-bottom: 135px;
+  }
+
+  .example__desc {
+    width: 450px;
+    margin-bottom: 0;
+  }
+
+  .example__about {
+    margin-bottom: 70px;
+  }
+
+  .example__overview {
+    width: 82%;
+    margin-bottom: 60px;
+  }
+
+  .example__overview-item {
+    span {
+      background-color: $lightgrey;
+    }
+  }
+
+  .example__cost {
+    width: 100%;
+    text-align: left;
+
+    span {
+      display: inline-block;
+      margin-left: 60px;
+    }
+  }
+}

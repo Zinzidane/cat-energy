@@ -5,17 +5,6 @@
 .promo__wrapper {
   margin: 0;
   padding: 0;
-
-  &--form {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
-  &--catalog {
-    @include container;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
 }
 
 .promo__txt {
@@ -35,19 +24,6 @@
   font-size: 36px;
   color: #fff;
   line-height: 42px;
-
-  &--form {
-    @include container;
-    color: #000;
-    margin-bottom: 0;
-    text-align: left;
-  }
-
-  &--catalog {
-    margin: 0;
-    color: #000;
-    text-align: left;
-  }
 }
 
 .promo__slogan {
@@ -87,10 +63,6 @@
 @media #{$tablet-widths} {
   .promo__wrapper {
     @include container;
-
-    &--catalog {
-      margin-bottom: 70px;
-    }
   }
 
   .promo__txt {
@@ -108,15 +80,6 @@
     color: #000;
     font-weight: normal;
     text-align: left;
-
-    &--form {
-      margin-left: 0;
-    }
-
-    &--catalog {
-      margin-left: 0;
-      margin-bottom: 0;
-    }
   }
 
   .promo__slogan {
@@ -143,5 +106,38 @@
     font-size: 20px;
     top: 250px;
     left: calc(4% + 90px);
+  }
+}
+
+@media #{$desktop-widths} {
+  .promo {
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+  }
+
+  .promo__wrapper {
+    padding-top: 114px;
+    margin-left: 75px;
+    padding-bottom: 278px;
+    margin-bottom: 50px;
+  }
+
+  .promo__txt {
+    padding-bottom: 0;
+    margin-bottom: 50px;
+  }
+
+  .promo__img {
+    left: 520px;
+    top: 142px;
+    z-index: 5;
+  }
+
+  .promo__btn {
+    position: static;
+    margin-left: 90px;
+    width: 245px;
   }
 }

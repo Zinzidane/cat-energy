@@ -62,9 +62,17 @@
 
   .page-footer__social {
     width: 33%;
+    border-bottom: none;
   }
 
   .page-footer__copyright {
     width: 33%;
+  }
+}
+
+@media #{$desktop-widths} {
+  .page-footer__logo {
+    padding-top: 57px;
+    padding-bottom: 57px;
   }
 }

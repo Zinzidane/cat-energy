@@ -68,3 +68,33 @@
     }
   }
 }
+
+@media #{$desktop-widths} {
+  .address__wrapper {
+    position: relative;
+    padding-top: 0;
+    border-top: 3px solid #fff;
+  }
+
+  .address__about {
+    content: "";
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 570px;
+    height: 200px;
+    background-color: #fff;
+    padding: 60px 80px 60px 70px;
+  }
+
+  .address__invitation {
+    width: 30%;
+    margin: 0;
+  }
+
+  .address__info {
+    width: 30%;
+    margin: 0;
+  }
+}

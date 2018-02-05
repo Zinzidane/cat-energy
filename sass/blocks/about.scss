@@ -134,3 +134,14 @@
 
   }
 }
+
+@media #{$desktop-widths} {
+  .about {
+    border-bottom: none;
+    margin-bottom: 75px;
+  }
+
+  .about__item {
+    width: 25%;
+  }
+}

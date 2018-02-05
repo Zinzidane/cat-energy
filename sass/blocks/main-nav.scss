@@ -17,6 +17,10 @@
     border-bottom: 1px solid $grey;
     top: 0;
     text-align: left;
+
+    img {
+      display: none;
+    }
 }
 
 .main-nav__logo-img {
@@ -109,6 +113,10 @@
     padding: 0;
     width: 190px;
     border: none;
+
+    img {
+      display: block;
+    }
   }
 
   .main-nav__logo-img {
@@ -161,3 +169,38 @@
     display: block;
   }
 } 
+
+@media #{$desktop-widths} {
+  .main-nav {
+    &--index {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 50;
+    }
+  }
+
+  .main-nav__wrapper {
+    padding-top: 50px;
+  }
+
+  .main-nav__list {
+    width: 44%;
+
+    &--index {
+      .main-nav__item {
+        
+        &--active a {
+          border-bottom: 2px solid #fff;
+        }
+
+        a {
+          color: #fff;
+          
+        }
+      }
+    }
+  }
+}
