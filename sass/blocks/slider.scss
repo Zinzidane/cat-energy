@@ -117,10 +117,6 @@
   }
 
   .slider__slide {
-    img {
-      width: 677px;
-      max-width: none;
-    }
 
     &--prev {
       position: absolute;
@@ -134,6 +130,7 @@
       img {
         height: 499px;
         margin-top: 18px;
+        max-width: none;
       }
     }
 
@@ -142,8 +139,14 @@
       position: static;
       width: 545px;
       max-width: none;
-      margin-left: 106px;
+      margin-left: 46px;
       height: 517px;
+      
+      img {
+        width: 677px;
+        height: 517px;
+        max-width: none;
+      }
     }
   }
 

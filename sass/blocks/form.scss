@@ -82,6 +82,7 @@
 
 .form__legend {
   position: relative;
+  width: 100%;
   margin: 0;
   margin-left: 20px;
   margin-bottom: 35px;
@@ -90,14 +91,14 @@
   line-height: 30px;
 
   &--contacts {
-    padding-right: 119px;
+    padding-right: 40%;
 
     &::after {
       content: "";
       position: absolute;
       right: 0;
       top: 15px;
-      width: 99px;
+      width: 33%;
       height: 3px;
       background-color: $green;
     }
@@ -111,7 +112,7 @@
       position: absolute;
       right: 0;
       top: 15px;
-      width: 158px;
+      width: 53%;
       height: 3px;
       background-color: $green;
     }
@@ -125,7 +126,7 @@
       position: absolute;
       right: 0;
       top: 15px;
-      width: 136px;
+      width: 45%;
       height: 3px;
       background-color: $green;
     }
@@ -242,6 +243,7 @@
   padding: 13px;
   font-size: 16px;
   min-height: 150px;
+  border: 1px solid $greyish;
 }
 
 .form__checkbox {
@@ -295,4 +297,204 @@
   font-family: "Arial", sans-serif;
   text-align: center;
   margin-bottom: 27px;
+}
+
+@media #{$tablet-widths} {
+  .form__promo {
+    width: 330px;
+    margin-left: 10%;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  .form__fieldset {
+
+    &--initials {
+      padding-bottom: 0;
+      margin-bottom: 70px;
+      border-bottom: none;
+    }
+
+    &--programm {
+      margin-left: 10%;
+      margin-bottom: 70px;
+      padding: 30px;
+      border: 1px solid $greyish;
+    }
+
+    &--contacts {
+      margin-bottom: 70px;
+    }
+
+    &--comment {
+      margin-bottom: 70px;
+    }
+
+    &--additional {
+      margin-bottom: 50px;
+    }
+  }
+
+  .form__legend {
+    margin-left: 0;
+    font-size: 36px;
+    padding-left: 10%;
+
+    &--contacts {
+      padding-right: 22%;
+      margin-bottom: 70px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 4%;
+        height: 3px;
+        background-color: $green;
+      }
+      
+      &::after {
+        width: 19%;
+      }
+    }
+
+    &--comment {
+      padding-right: 65%;
+      margin-bottom: 70px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 4%;
+        height: 3px;
+        background-color: $green;
+      }
+
+      &::after {
+        width: 63%;
+      }
+    }
+
+    &--additional {
+      margin-bottom: 50px;
+      padding-right: 65%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 4%;
+        height: 3px;
+        background-color: $green;
+      }
+
+      &::after {
+        width: 60%;
+      }
+    }
+  }
+
+  .form__container {
+    width: 82%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    &--programm {
+      margin-left: 0;
+    }
+
+    &--checkbox {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .form__group {
+    margin-bottom: 20px;
+
+    &--checkbox {
+      width: 50%;
+    }
+  }
+
+  .form__input {
+    height: 53px;
+    line-height: 53px;
+  }
+
+  .form__radio {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    label {
+      font-size: 20px;
+      padding-left: 65px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .form__label {
+    font-size: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .form__radio-input:checked + label::after {
+    width: 18px;
+    height: 18px;
+    left: 11px;
+  }
+
+  .form__checkbox + .form__label{
+    padding-left: 59px;
+  }
+
+  .form__checkbox + .form__label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__checkbox:checked + .form__label::after {
+    width: 21px;
+    height: 16px;
+    left: 9px;
+    top: 11px;
+  }
+
+  .form__input {
+    font-size: 20px;
+  }
+
+  .form__textarea {
+    font-size: 20px;
+    padding: 18px;
+    min-height: 174px;
+  }
+
+  .form__btn {
+    display: inline-block;
+    font-size: 20px;
+    height: 52px;
+    margin-bottom: 70px;
+    margin-left: 10%;
+    margin-right: 60px;
+  }
+
+  .form__reminder {
+    display: inline-block;
+    margin-bottom: 70px;
+    font-size: 16px;
+  }
 }
