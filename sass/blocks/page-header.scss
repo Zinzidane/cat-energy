@@ -43,3 +43,13 @@
     }
   }
 }
+
+@media #{$desktop-widths} {
+  .page-header__title {
+    margin-left: 7.5%;
+
+    &--form {
+      padding-top: 80px;
+    }
+  }
+}

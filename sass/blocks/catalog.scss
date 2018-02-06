@@ -219,3 +219,26 @@
     font-size: 16px;
   }
 }
+
+@media #{$desktop-widths} {
+  .catalog__item {
+    width: 20.5%;
+
+    &:nth-child(7) {
+      margin-bottom: 140px;
+    }
+
+    &:nth-last-child(2),
+    &:nth-last-child(3),
+    &:nth-last-child(4) {
+      margin-bottom: 70px;
+    }
+  }
+
+
+
+  .catalog__more {
+    width: 20.5%;
+    margin-bottom: 70px;
+  }
+}
