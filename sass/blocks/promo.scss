@@ -13,11 +13,13 @@
   padding-top: 24px;
   padding-bottom: 164px;
   margin-bottom: 136px;
+  background-color: $green;
   background-image: url(../img/index-background-mobile@1x.jpg);
 }
 
 .promo__title {
-  margin: 0;
+  width: 270px;
+  margin: 0 auto;
   margin-bottom: 14px;
   padding: 0;
   text-align: center;
@@ -27,7 +29,8 @@
 }
 
 .promo__slogan {
-  margin: 0;
+  width: 270px;
+  margin: 0 auto;
   padding: 0;
   font-size: 14px;
   line-height: 18px;
@@ -40,7 +43,8 @@
   width: 280px;
   height: 270px;
   top: 168px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .promo__btn {
@@ -77,11 +81,13 @@
     width: 430px;
     padding-bottom: 620px;
     margin-bottom: 0;
+    background-color: transparent;
     background-image: none;
     margin-left: 90px;
   }
 
   .promo__title {
+    width: auto;
     margin-bottom: 40px;
     font-size: 60px;
     line-height: 60px;
@@ -91,6 +97,7 @@
   }
 
   .promo__slogan {
+    width: auto;
     font-size: 20px;
     text-transform: uppercase;
     color: #000;
@@ -101,7 +108,8 @@
     width: 709px;
     height: 609px;
     top: 220px;
-    left: 30px;
+    left: 4%;
+    transform: translateX(0%);
     z-index: -5;
     margin: 0 auto;
   }

@@ -25,18 +25,22 @@
 
 .address__invitation {
   width: 50%;
+  max-width: 155px;
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .address__info {
   width: 50%;
+  max-width: 150px;
   font-family: "Arial";
   font-size: 14px;
 }
 
 .address__map {
   background-image: url("../img/map-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 364px;
 }
 
@@ -56,6 +60,7 @@
 
   .address__info {
     width: 23%;
+    max-width: 250px;
     font-size: 16px;
     text-align: right;
 
@@ -66,6 +71,11 @@
         margin-bottom: 15px;
       }
     }
+  }
+
+  .address__map {
+    background-image: url("../img/map-tablet.png");
+    height: 400px;
   }
 }
 
@@ -96,5 +106,9 @@
   .address__info {
     width: 38%;
     margin: 0;
+  }
+
+  .address__map {
+    background-image: url("../img/map-desktop.png");
   }
 }

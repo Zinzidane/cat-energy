@@ -20,22 +20,30 @@ var sliderControl = document.querySelector(".slider__switch input");
 var slideBefore = document.querySelector(".slider__slide--prev");
 var slideAfter = document.querySelector(".slider__slide--next");
 
-sliderControl.addEventListener('change', function() {
-	if (!sliderControl.checked) {
-	  slideBefore.classList.add("slider__slide--show");
-	  slideAfter.classList.remove("slider__slide--show");
-	}
 
-	if (sliderControl.checked) {
-		slideBefore.classList.remove("slider__slide--show");
-		slideAfter.classList.add("slider__slide--show");
-	}
-	
-});
+if(sliderControl) {
+	sliderControl.addEventListener('change', function () {
+		if (!sliderControl.checked) {
+			slideBefore.classList.add("slider__slide--show");
+			slideAfter.classList.remove("slider__slide--show");
+		}
+
+		if (sliderControl.checked) {
+			slideBefore.classList.remove("slider__slide--show");
+			slideAfter.classList.add("slider__slide--show");
+		}
+
+	});
+}
+
 
 // Слайдер сравнения изображений на планшетных версиях
 
 function createComparison(element, layer) {
+	if(!element || !layer) {
+		return false;
+	}
+
 	element.addEventListener('change', function(evt) {
 		console.log(evt);
 		var width = evt.currentTarget.value;
