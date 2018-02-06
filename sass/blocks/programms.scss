@@ -95,6 +95,25 @@
     transform: translateY(-50%);
     background-image: url(../img/icon-right-arrow-long.svg);
   }
+
+  &:hover {
+    padding-right: 44px;
+
+    &::before {
+      width: 33px;
+      background-image: url(../img/right-arrow-verylong.png);
+    }
+  }
+
+  &:active {
+    padding-right: 44px;
+    opacity: 0.3;
+
+    &::before {
+      width: 33px;
+      background-image: url(../img/right-arrow-verylong.png);
+    }
+  }
 }
 
 @media #{$tablet-widths} {

@@ -17,6 +17,14 @@
   margin: 0 auto;
   text-align: center;
   border-bottom: 1px solid $greyish;
+
+  & a:hover {
+    opacity: 0.8;
+  }
+
+  & a:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__social {
@@ -42,6 +50,24 @@
     font-size: 16px;
     text-decoration: none;
     color: #000;
+
+    svg {
+      width: 27px;
+      height: 34px;
+    }
+
+    &:hover {
+      svg path {
+        fill: #68b738;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+      svg path {
+        fill: #68b738;
+      }
+    }
   }
 
   svg path {
@@ -67,6 +93,11 @@
 
   .page-footer__copyright {
     width: 33%;
+
+    svg {
+      width: 27px;
+      height: 34px;
+    }
   }
 }
 

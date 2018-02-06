@@ -69,6 +69,14 @@
   border: none;
   color: #fff;
   text-decoration: none;
+
+  &:hover {
+    background-color: $darkgreen;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .catalog__more {
@@ -115,10 +123,18 @@
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
-  background-color: $greyish;
+  background-color: $lightgrey;
   border: none;
   color: #000;
   text-decoration: none;
+
+  &:hover {
+    background-color: $grey;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media #{$tablet-widths} {

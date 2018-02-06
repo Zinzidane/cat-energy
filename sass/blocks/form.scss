@@ -191,7 +191,25 @@
   line-height: 45px;
   padding-right: 35px;
   padding-left: 15px;
-  border: 1px solid $greyish;
+  border: 1px solid $input;
+
+  &:hover {
+    border: 1px solid $inputhover;
+  }
+
+  &:active {
+    border: 2px solid $inputactive;
+  }
+
+  &:focus {
+    border: 2px solid $inputactive;
+    outline: none;
+  }
+
+  &:disabled {
+    border: 2px solid $inputdisabled;
+    background: #fff;
+  }
 }
 
 .form__radio {
@@ -210,32 +228,53 @@
   display: none;
 } 
 
-.form__radio-input+label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  bottom: 50%;
-  transform: translateY(-50%);
-  margin-right: 20px;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border: 1px solid $greyish;
-  border-radius: 50%;
+.form__radio-input {
+  &+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid $input;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    &+label::before {
+      border: 1px solid $inputhover;
+    }
+  }
+
+  &:active {
+    &+label::before {
+      border: 1px solid $inputhover;
+      opacity: 0.3;
+    }
+
+    &+label::after {
+      opacity: 0.3;
+    }
+  }
 }
 
-.form__radio-input:checked+label::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  left: 9px;
-  top: 50%;
-  bottom: 50%;
-  transform: translateY(-50%);
-  background-color: $green;
-  border-radius: 50%;
+.form__radio-input:checked {
+  &+label::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 9px;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    background-color: $green;
+    border-radius: 50%;
+  }
 }
 
 .form__textarea {
@@ -243,7 +282,25 @@
   padding: 13px;
   font-size: 16px;
   min-height: 150px;
-  border: 1px solid $greyish;
+  border: 1px solid $input;
+
+  &:hover {
+    border: 1px solid $inputhover;
+  }
+
+  &:active {
+   border: 2px solid $inputactive;
+   outline: none;
+  }
+
+  &:focus {
+    border: 2px solid $inputactive;
+    outline: none;
+  }
+
+  &:disabled {
+    border: 2px solid $inputdisabled;
+  }
 }
 
 .form__checkbox {
@@ -253,6 +310,7 @@
 .form__checkbox+.form__label {
   position: relative;
   padding-left: 45px;
+  cursor: pointer;
 }
 
 .form__checkbox+.form__label::before {
@@ -262,7 +320,20 @@
   top: 0;
   width: 30px;
   height: 30px;
-  border: 1px solid $greyish;
+  border: 1px solid $input;
+}
+
+.form__checkbox:hover+.form__label::before {
+  border: 1px solid $inputhover;
+}
+
+.form__checkbox:active+.form__label::before {
+  border: 1px solid $inputhover;
+  opacity: 0.3;
+}
+
+.form__checkbox:active+.form__label::after {
+  opacity: 0.3;
 }
 
 .form__checkbox:checked+.form__label::after {
@@ -290,6 +361,14 @@
   border: none;
   color: #fff;
   text-decoration: none;
+
+  &:hover {
+    background-color: $darkgreen;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .form__reminder {

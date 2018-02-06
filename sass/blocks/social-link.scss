@@ -7,20 +7,66 @@
   }
 
   &--vk {
-    background: url(../img/icon-vk-mobile.svg);
+    background: url(../img/icon-vk-mobile.svg) no-repeat;
     width: 22px;
     height: 12px;
+
+    &:hover {
+      background: url(../img/icon-vk-mobile-hover.svg) no-repeat;
+    }
+
+    &:active {
+      background: url(../img/icon-vk-mobile-hover.svg) no-repeat;
+      opacity: 0.3;
+    }
   }
 
   &--inst {
-    background: url(../img/icon-insta-mobile.svg);
+    background: url(../img/icon-insta-mobile.svg) no-repeat;
     width: 16px;
     height: 16px;
+
+    &:hover {
+      background: url(../img/icon-insfb-mobile-hover.svg) no-repeat;
+    }
+
+    &:active {
+      background: url(../img/icon-insfb-mobile-hover.svg) no-repeat;
+      opacity: 0.3;
+    }
   }
 
   &--fb {
-    background: url(../img/icon-fb-mobile.svg);
+    background: url(../img/icon-fb-mobile.svg) no-repeat;
     width: 10px;
     height: 19px;
+
+    &:hover {
+      background: url(../img/icon-fb-mobile-hover.svg) no-repeat;
+    }
+
+    &:active {
+      background: url(../img/icon-fb-mobile-hover.svg) no-repeat;
+      opacity: 0.3;
+    }
+  }
+}
+
+@media #{$tablet-widths} {
+  .social-link {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--inst {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
   }
 }

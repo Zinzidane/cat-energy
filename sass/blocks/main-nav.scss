@@ -17,10 +17,24 @@
     border-bottom: 1px solid $grey;
     top: 0;
     text-align: left;
+    transition: all .3s ease;
+
+    &[href]:hover {
+      opacity: 0.8;
+      transition: all .3s ease;
+    }
+
+    &[href]:active {
+      opacity: 0.6;
+    }
 
     img {
       display: none;
     }
+}
+
+.main-nav__fill.st0 {
+  fill: $yellow;
 }
 
 .main-nav__logo-img {

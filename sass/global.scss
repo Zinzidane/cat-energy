@@ -39,24 +39,59 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 6px;
 }
 
-input[type=range]::-webkit-slider-thumb {
+/* input[type=range]::-webkit-slider-thumb {
   cursor: pointer; 
   -webkit-appearance: none; 
-  border: 1px solid #fff;
+  border: 1px solid $green;
   border-radius: 50%;
   background-color: #fff;
-  box-shadow: 0px 0px 0px 12px #fff;
-  filter: drop-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.15));
-/*   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
-  width: 32px;
-  height: 32px; */
-/*   margin-top: -14px; */
-
+  box-shadow: 0px 0px 0px 12px #fff, 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   background-color: rgb(104, 183, 56);
   width: 8px;
   height: 8px;
+  transition: all .3s ease;
+} */
+
+input[type=range]::-webkit-slider-thumb {
+  cursor: pointer; 
+  -webkit-appearance: none;
+  margin-top: -13px;
+  border-radius: 50%;
+  background-color: $green;
+  box-shadow: inset 0px 0px 0px 13px #fff, 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  transition: all .3s ease;
 }
+
+input[type=range]:hover::-webkit-slider-thumb {
+  cursor: pointer; 
+  -webkit-appearance: none;
+  margin-top: -13px;
+  border-radius: 50%;
+  background-color: $green;
+  box-shadow: inset 0px 0px 0px 13px #fff, 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  transition: all .3s ease;
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+  cursor: pointer; 
+  -webkit-appearance: none;
+  margin-top: -13px;
+  border-radius: 50%;
+  background-color: $green;
+  box-shadow: inset 0px 0px 0px 2px $green, inset 0px 0px 0px 13px #fff, 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  transition: all .3s ease;
+}
+
 
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #dcdcdc;
@@ -72,13 +107,38 @@ input[type=range]::-moz-range-track {
 
 input[type=range]::-moz-range-thumb {
   cursor: pointer; 
-  border: 1px solid #fff;
+  margin-top: -13px;
   border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
-  width: 32px;
-  height: 32px;
-  margin-top: -14px;
+  background-color: $green;
+  box-shadow: inset 0px 0px 0px 13px #fff, 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  transition: all .3s ease;
+}
+
+input[type=range]:hover::-moz-range-thumb {
+  cursor: pointer; 
+  margin-top: -13px;
+  border-radius: 50%;
+  background-color: $green;
+  box-shadow: inset 0px 0px 0px 13px #fff, 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  transition: all .3s ease;
+}
+
+input[type=range]:active::-moz-range-thumb {
+  cursor: pointer; 
+  margin-top: -13px;
+  border-radius: 50%;
+  background-color: $green;
+  box-shadow: inset 0px 0px 0px 2px $green, inset 0px 0px 0px 13px #fff, 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  transition: all .3s ease;
 }
 
 input[type=range]::-ms-track {
@@ -106,6 +166,30 @@ input[type=range]::-ms-thumb {
   width: 32px;
   height: 32px;
   margin-top: -14px;
+}
+
+input[type=range]:hover::-ms-thumb {
+  cursor: pointer; 
+  margin-top: -13px;
+  border-radius: 50%;
+  background-color: $green;
+  box-shadow: inset 0px 0px 0px 13px #fff, 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  transition: all .3s ease;
+}
+
+input[type=range]:active::-ms-thumb {
+  cursor: pointer;
+  margin-top: -13px;
+  border-radius: 50%;
+  background-color: $green;
+  box-shadow: inset 0px 0px 0px 2px $green, inset 0px 0px 0px 13px #fff, 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  transition: all .3s ease;
 }
 
 input[type=range]:focus::-ms-fill-lower {
