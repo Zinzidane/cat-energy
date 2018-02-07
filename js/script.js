@@ -1,3 +1,24 @@
+// Добавление карты Google Maps
+
+function initMap() {
+  var uluru = {lat: 59.938826, lng: 30.323083};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 17,
+    center: uluru
+  });
+
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    title: 'zinzidane.github.io/cat-energy',
+    icon: {
+      url: "img/map-pin.png",
+      scaledSize: new google.maps.Size(124, 106)
+    }
+  });
+}
+
+
 // Навигация на мобильных устройствах
 var navMain = document.querySelector(".main-nav");
 var navToggler = document.querySelector(".main-nav__toggler");
@@ -55,3 +76,5 @@ function createComparison(element, layer) {
 var layer = document.querySelector('.slider__slide--prev');
 
 createComparison(document.querySelector('.slider__range'), layer);
+
+
