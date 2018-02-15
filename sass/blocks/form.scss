@@ -44,9 +44,12 @@
 
 .form__promo {
   @include container;
+  width: 250px;
   text-transform: uppercase;
+  text-align: left;
   line-height: 18px;
-  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-bottom: 38px;
 }
 
 .form__fieldset {
@@ -55,13 +58,12 @@
   border: none;
 
   &--initials {
-    padding-bottom: 20px;
+    padding-bottom: 21px;
     border-bottom: 1px solid $greyish;
   }
 
   &--programm {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 23px;
     border-bottom: 1px solid $greyish;
     margin-bottom: 28px;
   }
@@ -71,11 +73,11 @@
   }
 
   &--comment {
-    margin-bottom: 28px;
+    margin-bottom: 23px;
   }
 
   &--additional {
-    margin-bottom: 38px;
+    margin-bottom: 35px;
   }
 
 }
@@ -88,7 +90,7 @@
   margin-bottom: 35px;
   padding: 0;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 24px;
 
   &--contacts {
     padding-right: 40%;
@@ -98,7 +100,7 @@
       position: absolute;
       right: 0;
       top: 15px;
-      width: 33%;
+      width: 37%;
       height: 3px;
       background-color: $green;
     }
@@ -112,7 +114,7 @@
       position: absolute;
       right: 0;
       top: 15px;
-      width: 53%;
+      width: 55%;
       height: 3px;
       background-color: $green;
     }
@@ -126,7 +128,7 @@
       position: absolute;
       right: 0;
       top: 15px;
-      width: 45%;
+      width: 49%;
       height: 3px;
       background-color: $green;
     }
@@ -142,11 +144,11 @@
   padding: 0;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-transform: uppercase;
 
   &--checkbox {
-    margin-bottom: 22px;
+    margin-bottom: 12px;
   }
 
   &--email {
@@ -183,11 +185,17 @@
 .form__label {
   margin-right: 15px;
   font-size: 16px;
+  line-height: 30px;
+
+  &--age {
+    min-width: 95px;
+  }
 }
 
 .form__input {
   flex-grow: 1;
   height: 45px;
+  font-size: 16px;
   line-height: 45px;
   padding-right: 35px;
   padding-left: 15px;
@@ -215,7 +223,7 @@
 .form__radio {
   text-transform: uppercase;
   font-size: 16px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
   label {
     position: relative;
@@ -349,12 +357,12 @@
 .form__btn {
   display: block;
   margin: 0 auto;
-  margin-bottom: 23px;
+  margin-bottom: 17px;
   padding: 14px 0;
   width: 280px;
   height: 40px;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 16px;
+  line-height: 16px;
   text-transform: uppercase;
   text-align: center;
   background-color: $green;

@@ -1,34 +1,40 @@
 .example {
   margin: 0;
   padding: 0; 
+  padding-top: 27px;
   background-color: $lightgrey;
 }
 
 .example__wrapper {
   @include container;
-  padding-top: 30px;
 }
 
 .example__title {
   margin: 0;
-  margin-bottom: 35px;
+  @include container;
+  margin-bottom: 30px;
   font-size: 36px;
   line-height: 44px;
 }
 
 .example__about {
-  font-family: "Arial";
   display: block;
+  width: 270px;
+  margin-bottom: 26px;
+  font-family: "Arial", sans-serif;
+  line-height: 18px;
 }
 
 .example__overview {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .example__overview-item {
   font-family: "OswaldRegular";
-  padding: 10px 0;
+  padding: 11px 0;
+  padding-bottom: 14px;
   margin-bottom: 20px;
   width: 125px;
   height: 57px;
@@ -41,7 +47,7 @@
   span {
     position: absolute;
     left: 50%;
-    bottom: -10px;
+    bottom: -17px;
     transform: translateX(-50%);
     background-color: $lightgrey;
     padding: 0 10px;
@@ -64,10 +70,10 @@
 @media #{$tablet-widths} {
   .example {
     background-color: #fff;
+    padding-top: 50px;
   }
 
   .example__wrapper {
-    padding-top: 50px;
   }
 
   .example__title {
@@ -85,6 +91,7 @@
   .example__about {
     width: 100%;
     font-size: 16px;
+    line-height: 24px;
     margin-bottom: 55px;
     letter-spacing: 0.3px;
   }
@@ -126,18 +133,26 @@
 
 @media #{$desktop-widths} {
   .example {
+    position: relative;
+    padding-top: 40px;
     display: flex;
-    background-color: $lightgrey;
+    flex-direction: column;
+    background-color: #fff;
   }
 
   .example__wrapper {
-    padding-top: 0;
+    width: 100%;
+    padding-top: 70px;
+    margin: 0;
     padding-left: 7.5%;
+    padding-bottom: 40px;
+    background-color: $lightgrey;
+    max-width: 1440px;
   }
 
   .example__title {
-    padding-top: 40px;
-    margin-bottom: 135px;
+    width: 85%;
+    margin-bottom: 65px;
   }
 
   .example__desc {

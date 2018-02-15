@@ -66,7 +66,6 @@ function createComparison(element, layer) {
 	}
 
 	element.addEventListener('change', function(evt) {
-		console.log(evt);
 		var width = evt.currentTarget.value;
 		layer.style.width = width + "%";
 /* 		layer.style.clip = `rect(0px ${width}px 0px 0px)`; */

@@ -4,17 +4,21 @@
 }
 
 .slider__wrapper {
-  @include container;
   padding: 0;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 33px;
   text-align: center;
+}
+
+.slider__slides {
+  margin-bottom: 26px;
 }
 
 .slider__controls {
   display: flex;
-  width: 200px;
+  width: 198px;
   margin: 0 auto;
+  font-size: 16px;
   justify-content: space-between;
   align-items: center;
 }
@@ -37,6 +41,7 @@
     position: relative;
     background-color: #fff;
     border-radius: 15px;
+    border: 1px solid $greyish;
     padding: 3px 5px;
 
     input {
@@ -97,18 +102,23 @@
 
 @media #{$tablet-widths} {
   .slider {
-    background-color: $lightgrey;
+    background-color: #fff;
+    padding-top: 70px;
     margin: 0 auto;
   }
 
   .slider__wrapper {
+    padding: 0;
     text-align: center;
+    background-color: $lightgrey;
   }
 
   .slider__slides {
-    width: 707px;
+    width: 100%;
+    max-width: 768px;
     height: auto;
     position: relative;
+    bottom: 100px;
     line-height: 0;
     margin: 0 auto;
     overflow: hidden;
@@ -118,6 +128,17 @@
 
   .slider__slide {
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background-color: #fff;
+      z-index: 1;
+    }
+
     &--prev {
       position: absolute;
       overflow: hidden;
@@ -125,11 +146,16 @@
       left: 0px;
       width: 50%;
       height: 517px;
+      z-index: 5;
       background-color: $lightgrey;
 
       img {
+        position: absolute;
+        top:0;
+        left: 0;
         height: 499px;
         margin-top: 18px;
+        z-index: 5;
         max-width: none;
       }
     }
@@ -137,15 +163,19 @@
     &--next {
       display: block;
       position: static;
-      width: 545px;
+      width: 100%;
       max-width: none;
       margin-left: 46px;
       height: 517px;
       
       img {
-        width: 677px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
         height: 517px;
         max-width: none;
+        z-index: 2;
       }
     }
   }
@@ -156,6 +186,8 @@
 
   .slider__controls {
     width: 576px;
+    position: relative;
+    bottom: 50px;
   }
 
   .slider__range {
@@ -171,5 +203,22 @@
 }
 
 @media #{$desktop-widths} {
-  
+  .slider {
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	background-color: $lightgrey;
+  }
+
+  .slider__slides {
+  	bottom: 70px;
+  }
+
+  .slider__slide {
+
+    &::before {
+      height: 149px;
+      z-index: 2;
+    }
+  }
 }
